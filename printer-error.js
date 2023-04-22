@@ -36,3 +36,23 @@ function printerError(s) {
     }
     return `${num}/${den}`;
   }
+
+
+
+//   solutions from codewars
+function printerError(s) {
+    // your code
+    var count = 0;
+    for(var i = 0; i < s.length; i++) {
+      if (s[i] > "m") {
+        count++;
+      }
+    }
+    return count+"/"+s.length;
+}
+
+//   arrow function solutions
+const printerError = s => `${s.replace(/[a-m]/gi, "").length}/${s.length}`;
+
+// 
+var printerError = s => (s.match(/[n-z]/g) || []).length + '/' + s.length;
