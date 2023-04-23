@@ -35,5 +35,12 @@ function alphabetPosition(text) {
     return newString;
 }
   
-
+//  array methods
+function alphabetPosition(text) {
+    return text.toLowerCase()
+      .split('')
+      .filter(c => c.charCodeAt(0) < 123 && c.charCodeAt(0) > 96)
+      .map(c => c.charCodeAt(0) - 96)
+      .join(' ');
+  }
   
